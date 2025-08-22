@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giới thiệu / About Me</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .lang-btn { margin-bottom: 20px; }
+    .hidden { display: none; }
+    .avatar { width: 80px; border-radius: 50%; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="lang-btn">
+    <button onclick="showVN()">Tiếng Việt</button>
+    <button onclick="showEN()">English</button>
+  </div>
+
+  <img src="https://avatars.githubusercontent.com/u/1042759627?v=4" alt="Avatar" class="avatar">
+
+  <div id="vietnamese">
+    <h1>Xin chào!</h1>
+    <p>Mình là <b>holao09</b>.</p>
+    <p>Mình yêu thích công nghệ, lập trình và xây dựng các dự án cá nhân trên GitHub.</p>
+    <p>Bạn có thể liên hệ với mình qua email: <a href="mailto:mrholao09@gmail.com">mrholao09@gmail.com</a> hoặc xem các dự án trên trang này.</p>
+  </div>
+
+  <div id="english" class="hidden">
+    <h1>Hello!</h1>
+    <p>I'm <b>holao09</b>.</p>
+    <p>I'm passionate about technology, programming, and building personal projects on GitHub.</p>
+    <p>You can contact me at: <a href="mailto:mrholao09@gmail.com">mrholao09@gmail.com</a> or explore my projects on this page.</p>
+  </div>
+
+  <script>
+    function showVN() {
+      document.getElementById('vietnamese').classList.remove('hidden');
+      document.getElementById('english').classList.add('hidden');
+      document.documentElement.lang = 'vi';
+    }
+    function showEN() {
+      document.getElementById('vietnamese').classList.add('hidden');
+      document.getElementById('english').classList.remove('hidden');
+      document.documentElement.lang = 'en';
+    }
+  </script>
+</body>
+</html>
